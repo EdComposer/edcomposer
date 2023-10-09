@@ -1,0 +1,47 @@
+{
+  "name": "remotion-template-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "preview": "BROWSER=0 remotion preview src/index.ts",
+    "render": "remotion render src/index.ts hello-world",
+    "lambda:site": "remotion lambda sites create ./remotion/index.ts",
+    "lambda:function": "remotion lambda functions deploy"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.17",
+    "@remotion/lambda": "^4.0.17",
+    "@remotion/player": "^4.0.17",
+    "@remotion/tailwind": "^4.0.17",
+    "@t3-oss/env-nextjs": "^0.6.0",
+    "@types/node": "20.4.8",
+    "@types/react": "18.2.18",
+    "@types/react-dom": "18.2.7",
+    "clsx": "^2.0.0",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "next": "13.4.12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remotion": "^4.0.17",
+    "tailwind-merge": "^1.14.0",
+    "typescript": "5.1.6",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "^4.0.17",
+    "autoprefixer": "10.4.14",
+    "css-loader": "^6.7.3",
+    "dotenv": "^16.0.3",
+    "postcss": "8.4.23",
+    "postcss-loader": "^7.3.0",
+    "postcss-preset-env": "^8.3.2",
+    "style-loader": "^3.3.2",
+    "tailwindcss": "3.3.2",
+    "ts-node": "^10.9.1"
+  }
+}
