@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #121628;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url("../images/background-image-top.svg"), url("../images/background-image-bottom.svg");
+    background-position: top right, bottom left;
+    background-size: 60%, 100%;
+    background-repeat: no-repeat;
+}

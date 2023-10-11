@@ -10,8 +10,6 @@ export default function SlideExitToTop({ children }: { children?: ReactNode }) {
   const frame = useCurrentFrame();
   const { durationInFrames, fps } = useVideoConfig();
 
-  console.log(durationInFrames);
-
   const exitSpring = spring({
     frame,
     fps,

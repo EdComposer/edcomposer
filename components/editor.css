@@ -1,0 +1,226 @@
+input, button, textarea {
+    all: unset;
+  }
+  button {
+    cursor: pointer;
+  }
+    .editor-h1 {
+      color: #E6DDF3;
+font-size: 40px;
+font-weight: 600;
+line-height: 120%;
+
+margin-top: 60px;
+    }
+
+    .editor-span   {
+      color: #FFF;
+    }
+
+    .editor-page-content {
+      width: 100%;
+      padding: 80px 7.5%;
+
+      display: grid;
+      grid-template: 1fr / 2fr 1fr;
+      gap: 120px;
+      height: 100svh;
+
+    }
+
+    .logo {
+        background-image: url('../images/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: clamp(250px, 40%, 300px);
+    aspect-ratio: 8/1;
+    }
+
+    .button {
+        position: relative;
+
+      display: flex;
+      padding: 16px 24px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+
+      border-radius: 100px;
+      background: linear-gradient(270deg, #E6DDF3 0%, #FFF 47.34%, #E6DDF3 102.13%);
+
+      white-space: nowrap;
+      text-wrap: nowrap;
+      font-weight: 500;
+      font-size: 20px;
+      color: #5D5E6E;
+      text-wrap: nowrap;
+
+      transition: all 0.2s;
+    }
+
+    .button::before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border-radius: 100px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        opacity: 0;
+        transition: all 0.2s;
+    }
+
+    .button:hover, .cancel-button:hover {
+        transform: translateY(-2px);
+    }
+
+    .button:focus::before {
+        opacity: 1;
+    }
+
+    .topic-input-container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: 16px;
+
+      margin-top: 36px;
+    }
+
+    .teach-me {
+      color: #FFF;
+      font-size: 20px;
+      font-weight: 500;
+      text-wrap: nowrap;
+    }
+
+    .topic-input {
+      flex-grow: 1;
+      width: clamp(250px, 100%, 440px);
+
+      height: 56px;
+      padding: 0px 32px;
+
+      border-radius: 6px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+background: rgba(18, 22, 40, 0.70);
+
+      color: rgba(242, 238, 249);
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .extra-input {
+      position: inherit;
+      resize: none;
+      color: rgba(242, 238, 249);
+
+      border-radius: 16px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+background: rgba(18, 22, 40, 0.70);
+
+      width: 100%;
+      height: 200px;
+      padding: 32px;
+
+      font-family: inherit;
+      font-size: 20px;
+      font-weight: 400;
+
+      margin-top: 24px;
+
+      text-align: start;
+    }
+
+    input::placeholder {
+      color: rgba(242, 238, 249, 0.60);
+font-size: 20px;
+font-weight: 400;
+    }
+
+    .video-player {
+      width: clamp(300px, 100%, 411px);
+      aspect-ratio: 9/16;
+      background-color: '#000';
+
+      border-radius: 20px;
+      box-shadow: 0px 20px 80px 0px rgba(255, 255, 255, 0.05);
+    }
+    .pre-render {
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/video-background-image.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 20px;
+    }
+    .post-render {
+      display: none;
+
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+
+    .loader {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .loading-bar {
+        display: flex;
+        height: 12px;
+        width: 100%;
+        border-radius: 10px;
+        background: #222535;
+    }
+    .current-progress {
+        border-radius: 10px;
+        background: linear-gradient(90deg, #ABEC83 0%, #63AC77 100%);
+    }
+
+    .cancel-button {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        color:#ED6868;
+
+        transition: all 0.2s;
+    }
+    .cancel-button:focus {
+        color: #c74747;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .editor-page-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100svh;
+            marginTop: 60px;
+        }
+
+        .topic-input-container {
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+        }
+        .topic-input, .extra-input {
+            background: rgb(23, 27, 48);
+        }
+        .content {
+            width: 100%;
+            max-width: 420px;
+        }
+    }

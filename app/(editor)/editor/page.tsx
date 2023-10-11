@@ -8,7 +8,6 @@ export const metadata = {
 export default function EditorPage() {
   return (
     <div className="flex flex-col gap-10 items-center justify-center w-full h-full text-center">
-      Editor Page
       <Editor />
     </div>
   );

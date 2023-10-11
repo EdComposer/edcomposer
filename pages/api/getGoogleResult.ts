@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-const { GOOGLE_IMG_SCRAP, GOOGLE_QUERY } = require("google-img-scrap");
+const { GOOGLE_IMG_SCRAP } = require("google-img-scrap");
 
 type Request = NextApiRequest & {
   query: {
